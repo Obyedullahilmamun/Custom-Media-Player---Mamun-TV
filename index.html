@@ -221,6 +221,16 @@
     style="height: 40px; margin: 0; background-color: #4caf50; color: white; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; padding: 0 1.25rem; width: fit-content;">
     Load HLS/m3u8
   </button>
+
+  <label for="mp4Link" style="margin: 0 0 0.25rem 0; font-weight: 600; font-size: 0.9rem;">MP4 video link</label>
+<input id="mp4Link" type="text" placeholder="Enter MP4 video URL"
+  style="height: 40px; margin: 0 0 0.5rem 0; padding: 0 1rem; border: 1.5px solid #ccc; border-radius: 6px; box-sizing: border-box;" />
+
+<button id="loadMp4" type="button"
+  style="height: 40px; margin: 0; background-color: #4caf50; color: white; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; padding: 0 1.25rem; width: fit-content;">
+  Load MP4
+</button>
+
 </div>
 
     <div id="player" aria-live="polite" aria-label="Video player container">
@@ -262,6 +272,16 @@ document.getElementById("loadHLS").addEventListener("click", function () {
     loadPlayer(hlsURL);
   }
 });
+
+
+
+document.getElementById("loadMp4").addEventListener("click", function () {
+  const mp4URL = document.getElementById("mp4Link").value.trim();
+  if (mp4URL) {
+    loadPlayer(mp4URL);
+  }
+});
+
 
 </script>
   
